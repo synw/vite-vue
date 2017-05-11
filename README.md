@@ -32,14 +32,14 @@ Example with a basic app:
    },
    methods: {
       load: function() {
-         var url = 'http://localhost:8080/some_endpoint';
          function action(data) {
             app.content = data.something;
          };
          function error(err) { 
-            console.log("ERROR", err, url) 
+            console.log("ERROR", err) 
          };
          // process network operation
+         var url = 'http://localhost:8080/some_endpoint';
          this.loadData(url, action, error);
          // update state
          this.activate(["content"]);
