@@ -4,7 +4,7 @@ Vue.js mixin for http operations and state management
 
 Note: for now this app is old school style: ES5 with classic script load tags. The benefits is simplicity with zero cognitive
 overhead neither tooling requirements. It is usable with a classic javascript knowledge and basic Vue.js notions. 
-That said some other flavours might come up later, like ES6 or Typescript. Anyway the simple classic old school approach or
+That said some other flavours might come up later, like ES6 or Typescript. Anyway the classic old school approach or
 mindset will be supported.
 
 ## Install
