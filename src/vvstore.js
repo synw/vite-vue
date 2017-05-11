@@ -4,10 +4,17 @@ const store = new Vuex.Store({
     	pageTitle: "",
 	},
 	mutations: {
-		activate: function(state, elems) {
-			for (i=0;i<elems.length;i++) {
-				state.active.push(elems[i]);
+		activate: function(state, elems, push) {
+			console.log("MUT * ACTIVATE", elems);
+			if (push) {
+				for (i=0;i<elems.length;i++) {
+					console.log("EL", elems[i]);
+					state.active.push(elems[i]);
+				}
+			} else {
+				state.active = elems;
 			}
+			console.log("END", state.active);
 		},
 		deactivate: function(state, elems) {
 			for (i=0;i<state.active.length;i++) {
