@@ -4,7 +4,7 @@ Vue.js mixin for http operations and state management
 
 Note: for now this app is old school style: ES5 with classic script load tags. The benefit is simplicity with zero cognitive
 load neither tooling requirements. It is usable with a classic javascript knowledge and basic Vue.js notions. 
-That said some other flavours might come up later, like ES6 or Typescript. Anyway the classic old school approach or
+That said some other flavours might come up later, like ES6 or Typescript. Anyway the classic old school approach and
 mindset will be supported.
 
 ## Install
@@ -41,7 +41,7 @@ Example with a basic app:
             app.content = data.something;
          };
          function error(err) { 
-            console.log("ERROR", err) 
+            console.log("ERROR", err);
          };
          // process network operation
          var url = 'http://localhost:8080/some_endpoint';
