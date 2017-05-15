@@ -5,7 +5,7 @@ const store = new Vuex.Store({
 	},
 	mutations: {
 		activate: function(state, elems, push) {
-			console.log("MUT * ACTIVATE", elems);
+			if ( vvDebug === true) { console.log("MUT * ACTIVATE", elems) };
 			if (push) {
 				for (i=0;i<elems.length;i++) {
 					console.log("EL", elems[i]);
@@ -14,7 +14,7 @@ const store = new Vuex.Store({
 			} else {
 				state.active = elems;
 			}
-			console.log("END", state.active);
+			if ( vvDebug === true) { console.log("END", state.active) };
 		},
 		deactivate: function(state, elems) {
 			for (i=0;i<state.active.length;i++) {
