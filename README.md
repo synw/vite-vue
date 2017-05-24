@@ -24,7 +24,7 @@ The file `vv.js` is the mixin, ``vvstore.js`` is the store for state management
  
 ## Usage
 
-Example with a basic app:
+Fetch json data and use it:
 
    ```javascript
    const app = new Vue({
@@ -77,7 +77,11 @@ otherwise the elements will be added to the active set of elements.
 `flush(preserve)`:  reset all active elements values depending on their type: an array will be set [], a string to "", 
 a boolean to false and so on. Optionaly pass an element if you want not to reset it.
 
-`serializeForm(form)`:  pass a dom form element and receive the serialized json
+`serializeForm(form)`:  pass a dom form element and receive the serialized json based on the `name` attribute of the form
+elements.
+
+`postForm(url, data, action, error, token)`: data is your json serialized form data. Action and error are functions.
+The token is optional: if not provided the function will look for a global `csrftoken` variable and use it.
 
 #### Shortcuts
 
